@@ -3,13 +3,24 @@
   <head>
     <title>Cubo AR.js Tecnologías Emergentes</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
+    
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
       
       <a-marker type="pattern" url="patrones/marcador_ia.patt">
-         <a-entity gltf-model="modelos_3D/MiRedNeuronal.glb" scale="0.5 0.5 0.5" animation-mixer></a-entity>
+        <a-entity 
+          gltf-model="modelos_3D/MiRedNeuronal.glb" 
+          scale="0.5 0.5 0.5"
+          position="0 0 0"
+          animation-mixer>
+        </a-entity>
+      </a-marker>
+
+      <a-marker preset="kanji">
+        <a-entity gltf-model="modelos/turbina.glb" scale="0.5 0.5 0.5"></a-entity>
       </a-marker>
 
       <a-marker type="pattern" url="patrones/pattern-reciclaje.patt">
