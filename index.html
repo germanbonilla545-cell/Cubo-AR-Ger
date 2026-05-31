@@ -12,14 +12,16 @@
       
      <a-marker type="pattern" url="patrones/marcador_ia.patt">
     <a-box
-        position="0 0.5 0"
-        color="red"
-        scale="0.2 0.2 0.2">
-        animation="property: rotation;
-                   to: 0 360 0;
-                   loop: true;
-                   dur: 5000">
-    </a-box>
+ position="0 0.5 0"
+ scale="0.2 0.2 0.2"
+ color="red"
+ animation__rotar="
+    property: rotation;
+    from: 0 0 0;
+    to: 0 360 0;
+    loop: true;
+    dur: 5000">
+</a-box>
 </a-marker>
 
       <a-marker preset="kanji">
