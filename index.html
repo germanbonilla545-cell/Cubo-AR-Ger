@@ -10,14 +10,13 @@
     
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
       
-      <a-marker type="pattern" url="patrones/marcador_ia.patt">
-        <a-entity 
-          gltf-model="modelos_3D/MiRedNeuronal.glb" 
-          scale="0.00001 0.00001 0.00001"
-          position="0 0 0"
-          animation-mixer>
-        </a-entity>
-      </a-marker>
+     <a-marker type="pattern" url="patrones/marcador_ia.patt">
+    <a-box
+        position="0 0.5 0"
+        color="red"
+        scale="1 1 1">
+    </a-box>
+</a-marker>
 
       <a-marker preset="kanji">
         <a-entity gltf-model="modelos/turbina.glb" scale="0.5 0.5 0.5"></a-entity>
