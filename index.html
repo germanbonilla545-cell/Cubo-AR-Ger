@@ -12,18 +12,23 @@
       
      <a-marker type="pattern" url="patrones/marcador_ia.patt">
 
-    <a-entity
-    gltf-model="modelos_3D/MiRedNeuronal.glb"
-    scale="0.05 0.05 0.05"
+  <a-entity
     position="0 0.5 0"
+    rotation="-250 -180 0">
 
-    animation__rotar="
-        property: rotation;
-        from: -250 180 0;
-        to: -250 -540 0;
-        loop: true;
-        dur: 30000;
-        easing: linear">
+    <a-entity
+        gltf-model="modelos_3D/MiRedNeuronal.glb"
+        scale="0.05 0.05 0.05"
+
+        animation__rotar="
+            property: rotation;
+            from: 0 0 0;
+            to: 0 360 0;
+            loop: true;
+            dur: 30000;
+            easing: linear">
+    </a-entity>
+
 </a-entity>
 </a-marker>
 
